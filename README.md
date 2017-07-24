@@ -26,3 +26,9 @@ docker images | awk '{print $3}' | xargs docker rmi
 ```
 docker build -f 'path/to/Dockerfile' .
 ```
+
+## See docker stats from docker-compose containers
+```
+docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}\t{{.NetIO}}\t{{.BlockIO}}\t{{.PIDs}}"
+```
+[Source](https://gist.github.com/petermodzelewski/1567a711a9f26a5764a7)
